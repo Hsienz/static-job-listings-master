@@ -4,7 +4,6 @@
 	import FeatureAttr from "./FeatureAttr.svelte";
 	import Tag from "./Tag.svelte";
 	export let job: dataType;
-	const logo = new URL(job.logo,import.meta.url).href
 </script>
 
 <div
@@ -12,7 +11,7 @@
 >
 	<img
 		class="w-12 aspect-square absolute top-0 -translate-y-1/2 md:relative md:translate-y-0 md:w-auto md:h-24"
-		src={logo}
+		src={job.logo}
 		alt=""
 	/>
 	<div class="flex flex-col gap-[inherit]">

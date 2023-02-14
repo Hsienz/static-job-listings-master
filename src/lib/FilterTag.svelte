@@ -1,5 +1,4 @@
 <script lang="ts">
-	import iconRemove from "$lib/images/icon-remove.svg";
 	import {filters} from "$lib/stores/store"
 	export let content: string;
 </script>
@@ -9,6 +8,6 @@
 >
 	<p class="px-2">{content}</p>
 	<button on:click={()=>filters.delete(content)} class="h-full aspect-square bg-Desaturated_Dark_Cyan hover:bg-Very_Dark_Grayish_Cyan duration-300">
-		<img class="m-auto" src={iconRemove} alt="" />
+		<img class="m-auto" src="./images/icon-remove.svg" alt="" />
 	</button>
 </div>

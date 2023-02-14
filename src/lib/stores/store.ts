@@ -1,5 +1,5 @@
 import { derived, writable } from "svelte/store"
-import data from "$lib/data/data.json"
+import data from "$lib/data.json"
 
 export type dataType = typeof data[0]
 
