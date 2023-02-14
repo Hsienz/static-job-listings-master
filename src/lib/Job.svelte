@@ -3,11 +3,14 @@
     import NewAttr from './NewAttr.svelte';
     import FeatureAttr from './FeatureAttr.svelte';
     import Tag from './Tag.svelte';
+	import { onMount } from 'svelte';
     export let job: dataType
+    const logo = new URL(`/src/lib/${job.logo.slice(2)}`, import.meta.url).href
+    console.log(logo)
 </script>
 
 <div class="relative duration-300 border-l-[6px] box-content border-transparent hover:border-l-Desaturated_Dark_Cyan rounded-lg border-solid bg-white p-8 shadow-Desaturated_Dark_Cyan shadow-[0_10px_40px_-20px] flex flex-col gap-3">
-    <img class="w-12 aspect-square absolute top-0 -translate-y-1/2" src={`src/lib/${job.logo}`} alt="">
+    <img class="w-12 aspect-square absolute top-0 -translate-y-1/2" src={logo} alt="">
     <div class="flex gap-2">
         <p class="text-Desaturated_Dark_Cyan font-bold mr-4">{job.company}</p>
         {#if job.new}
