@@ -4,7 +4,7 @@
 	import FeatureAttr from "./FeatureAttr.svelte";
 	import Tag from "./Tag.svelte";
 	export let job: dataType;
-	const logo = new URL(`/src/lib/${job.logo.slice(2)}`, import.meta.url).href;
+	const logo = new URL(job.logo,import.meta.url).href
 </script>
 
 <div
